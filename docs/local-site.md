@@ -45,3 +45,27 @@ nav:
 The order of the files is going to be the same in which they will appear on your navigation panel:
 
 ![nav-panel](nav-panel.png)
+
+## Configuring Files For Deployment
+
+To ensure a smooth deployment with Netlify, you need to add some configuration files to your project.
+
+1. Create a new file called `.gitignore` in your main project directory with the following line as its content:
+```
+site/
+```
+2. Create a new file called `requirements.txt` in your main project directory with the following line as its content:
+```
+mkdocs>=0.9.0
+```
+Your project structure must be like the following:  
+```
+project
+├── docs
+|   ├── index.md
+|   └── page2.md
+|   └── page3.md
+├── .gitignore
+├── mkdocs.yml
+└── requirements.txt
+```
