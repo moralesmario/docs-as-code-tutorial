@@ -1,10 +1,12 @@
-# Hosting Your Documentation Project in GitHub
+# Hosting Your Project in GitHub
 
 This section explains how to store your project files in a remote repository.
 
+---
+
 ## Creating a GitHub Repository
 
-First, you need to create a GitHub repository where you will host your documentation files.
+Follow the next steps to create a GitHub repository to host your documentation files.
 
 1. Go to [GitHub](https://github.com/) and login or create a new account if you don't have one.
 2. Create a new repository.
@@ -19,7 +21,7 @@ First, you need to create a GitHub repository where you will host your documenta
 
 Follow the next steps to push your documents to the remote repository:
 
-1. Navigate to your project directory from a Terminal window
+1. Navigate to your project directory from a Terminal window.
 2. Run the following command to initialize your Git repository:  
 `git init`
 3. Add your documentation files to the repository with this command:  

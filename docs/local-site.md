@@ -2,6 +2,10 @@
 
 This section guides you through the process of creating your local documentation repository.
 
+---
+
+## Installing and Creating Your Project
+
 1. Install **MkDocs** by running this command in your Terminal:  
 `pip install mkdocs`
 2. Verify the installation by running this command:  
@@ -11,8 +15,8 @@ You should get something like this as a response:
 3. Run this command to create your local project:  
 `mkdocs new docs-as-code-tutorial` (ℹ) _You can use a different name for your project_  
 This creates a folder with a configuration file called `mkdocs.yml` and a folder called `docs`, which contains an `index.md` file.  
-![created-docs](created-docs.png)
-The `index.md` file is the main page of your new site. You can add more pages there by creating new Markdown files inside the `docs` folder. We will get to that later.
+![created-docs](created-docs.png)  
+The `index.md` file is the main page of your new site. You can add more pages there by creating new Markdown files inside the `docs` folder. Below is a section explaining how to do it.
 4. Navigate to your created project with:  
 `cd docs-as-code-tutorial`
 5. You can preview your static site as you work on it by running the following command:  
@@ -23,7 +27,7 @@ This command starts a local server with your rendered page so you can see how it
 
 ## Customizing Your Site
 
-Now you can start modifying the files in your project with your documentation details.
+You can start modifying the files in your project with your documentation details.
 
 1. Open the `index.md` file and change the title and information in the file and save them to see the changes update on your local server.
 2. Open the `mkdocs.yml` file and change the `site_name` value to your documentation project name:  
@@ -46,27 +50,12 @@ The order of the files is going to be the same in which they will appear on your
 
 ![nav-panel](nav-panel.png)
 
-## Configuring Files For Deployment
+## Building the Static Files
 
-To ensure a smooth deployment with Netlify, you need to add some configuration files to your project.
+Follow these steps to build the static files of your site:
 
-1. Create a new file called `.gitignore` in your main project directory with the following line as its content:
-```
-site/
-```
-2. Create a new file called `requirements.txt` in your main project directory with the following line as its content:
-```
-mkdocs>=0.9.0
-```
-Your project structure must be something like the following:  
-```
-docs-as-code-tutorial
-├── docs
-|   ├── index.md
-|   └── local-site.md
-|   └── repo.md
-|   └── deploy.md
-├── .gitignore
-├── mkdocs.yml
-└── requirements.txt
-```
+1. Run the following commang in your Terminal from your documentation directory:  
+`mkdocs build`
+2. Run the following command to create a file that avoids pushing your build files into the remote repository:  
+`echo "site/" >> .gitignore`  
+The static files (`index.html`, CSS files, and others) are now available in the `site` directory. You can use the files in that directory to host your site in an **AWS S3** bucket or any other static site hosting service.

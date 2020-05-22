@@ -1,4 +1,8 @@
-# Docs-as-code Tutorial
+# Docs-as-Code Tutorial
+
+A basic tutorial to create and host a documentation project using MkDocs and GitHub
+
+---
 
 ## Overview
 
@@ -15,9 +19,9 @@ There are many different tools available –from static site generators to hosti
 - [MkDocs](https://www.mkdocs.org) to create the static site.  
     (ℹ) **MkDocs** requires [Python](https://www.python.org) and [pip](https://pypi.org/project/pip/) package manager. If you are using Mac you should have them installed already. Verify if you have them by running `python --version` and `pip --version` in a **Terminal** window.
 - [GitHub](https://github.com) to host the documentation repository.
-- [Netlify](https://www.netlify.com) to automate the deploying process and host the web site.
+- [GitHub Pages](https://pages.github.com/) to automate the deploying process and host the web site.
 
-> The tutorial guides you through the process of installing the required tools.
+> The tutorial guides you through the process of installing and configuring the required tools.
 
 ## Get Help and Give Feedback
 
