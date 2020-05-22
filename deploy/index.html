@@ -87,13 +87,71 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#deploying-to-netlify">Deploying to Netlify</a></li>
+        <li class="main active"><a href="#deploying-to-a-static-site-hosting-service">Deploying to a Static Site Hosting Service</a></li>
+            <li><a href="#deploying-to-github-pages">Deploying to GitHub Pages</a></li>
+        <li class="main "><a href="#alternatives-for-deploying">Alternatives for Deploying</a></li>
+            <li><a href="#deploying-to-an-aws-s3-bucket">Deploying to an AWS S3 Bucket</a></li>
+            <li><a href="#deploying-to-netlify">Deploying to Netlify</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="deploying-to-netlify">Deploying to Netlify</h1>
-<p>Now you are going to connect your repository with Netlify.</p>
+<h1 id="deploying-to-a-static-site-hosting-service">Deploying to a Static Site Hosting Service</h1>
+<p>This section provides you with three different options to deploy and automate your deploy process to a site hosting service.</p>
+<hr />
+<h2 id="deploying-to-github-pages">Deploying to GitHub Pages</h2>
+<p>Deploying to GitHub Pages is the easiest way to host your documentation project. You only need to run the following command in your project directory:<br />
+<code>mkdocs gh-deploy</code>.</p>
+<p>MkDocs builds the static files and commits the changes to a new branch in your GitHub repository called <code>gh-pages</code>, which will be used by GitHub Pages as the documentation files source.</p>
+<p>To verify that the branch has been created and to view your documentation site live:</p>
+<ol>
+<li>Go to <a href="https://github.com/">GitHub</a> and navigate to your documentation project repository.</li>
+<li>Click the <strong>Branch:</strong> dropdown menu and look for a new branch called <code>gh-pages</code>.
+<img alt="branches" src="../branches.png" /><br />
+If you have it, that means that your docs are ready in GitHub Pages.</li>
+<li>Click the <strong>Settings</strong> tab at the upper right corner:
+<img alt="settings" src="../settings-button.png" /></li>
+<li>Navigate to the <strong>GitHub Pages</strong> section, where you can find the link to your documentation project page.
+<img alt="gh-pages-link" src="../gh-pages-link.png" /></li>
+</ol>
+<p><strong>IMPORTANT</strong>: If you make changes to your documentation site, after pushing your changes to <code>origin master</code>, remember to run the <code>mkdocs gh-deploy</code> command to also update your GitHub pages with the latest changes.</p>
+<h1 id="alternatives-for-deploying">Alternatives for Deploying</h1>
+<h2 id="deploying-to-an-aws-s3-bucket">Deploying to an AWS S3 Bucket</h2>
+<p>To follow this approach:</p>
+<ol>
+<li>Login to <a href="https://aws.amazon.com/">Amazon Web Services</a> or create a new account.</li>
+<li><a href="https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html">Create an S3 bucket</a></li>
+<li><a href="https://docs.aws.amazon.com/AmazonS3/latest/user-guide/static-website-hosting.html#configure-bucket-website-hosting">Configure the S3 bucket for static website hosting</a>.</li>
+<li>To deploy your files to the site:<ol>
+<li>You can upload the static files in the <code>site</code> folder that you created with the <code>mkdocs build</code> command to the S3 bucket and your site is ready in the provided S3 website URL.</li>
+<li>You can use the Amazon CLI to sync the <code>build</code> with a <code>deploy</code> to S3.<ol>
+<li><a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html">Install the AWS CLI</a></li>
+<li><a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html">Configure the AWS CLI</a></li>
+<li>Run the following command inside your project directory to start the build process and deploy to your S3 bucket:<br />
+<code>mkdocs build &amp;&amp; aws s3 sync site/ s3://&lt;your-bucket-name&gt;</code>.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="deploying-to-netlify">Deploying to Netlify</h2>
+<p>To ensure a smooth deployment with Netlify, you need to add a new configuration file called <code>requirements.txt</code> in your main project directory with the following line as its content:</p>
+<pre><code>mkdocs&gt;=0.9.0
+</code></pre>
+
+<p>Your project structure must be something like the following:  </p>
+<pre><code>docs-as-code-tutorial
+├── docs
+|   ├── index.md
+|   └── local-site.md
+|   └── repo.md
+|   └── deploy.md
+├── .gitignore
+├── mkdocs.yml
+└── requirements.txt
+</code></pre>
+
+<p>To connect your repository with Netlify:</p>
 <ol>
 <li>Log in to <a href="https://www.netlify.com">Netlify</a> or create a new account.</li>
 <li>Click the <strong>New site from Git</strong> button.</li>
