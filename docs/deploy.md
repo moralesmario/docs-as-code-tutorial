@@ -14,13 +14,15 @@ MkDocs builds the static files and commits the changes to a new branch in your G
 To verify that the branch has been created and to view your documentation site live:
 
 1. Go to [GitHub](https://github.com/) and navigate to your documentation project repository.
-2. Click the **Branch: ** dropdown menu and look for a new branch called `gh-pages`.
+2. Click the **Branch:** dropdown menu and look for a new branch called `gh-pages`.
 ![branches](branches.png)  
 If you have it, that means that your docs are ready in GitHub Pages.
 3. Click the **Settings** tab at the upper right corner:
 ![settings](settings-button.png)
 4. Navigate to the **GitHub Pages** section, where you can find the link to your documentation project page.
 ![gh-pages-link](gh-pages-link.png)
+
+**IMPORTANT**: If you make changes to your documentation site, after pushing your changes to `origin master`, remember to run the `mkdocs gh-deploy` command to also update your GitHub pages with the latest changes.
 
 # Alternatives for Deploying
 
