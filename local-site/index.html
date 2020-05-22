@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Local Setup - Docs-as-code Tutorial</title>
+        <title>1. Local Setup - Docs-as-code Tutorial</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -50,13 +50,13 @@
                                 <a href="..">Home</a>
                             </li>
                             <li class="active">
-                                <a href="./">Local Setup</a>
+                                <a href="./">1. Local Setup</a>
                             </li>
                             <li >
-                                <a href="../repo/">Remote Repository</a>
+                                <a href="../repo/">2. Remote Repository</a>
                             </li>
                             <li >
-                                <a href="../deploy/">Deploy</a>
+                                <a href="../deploy/">3. Deploy</a>
                             </li>
                             <li >
                                 <a href="../more-resources/">More Resources</a>
@@ -111,7 +111,7 @@ You should get something like this as a response:<br />
 <code>mkdocs new docs-as-code-tutorial</code> (ℹ) <em>You can use a different name for your project</em><br />
 This creates a folder with a configuration file called <code>mkdocs.yml</code> and a folder called <code>docs</code>, which contains an <code>index.md</code> file.<br />
 <img alt="created-docs" src="../created-docs.png" /><br />
-The <code>index.md</code> file is the main page of your new site. You can add more pages there by creating new Markdown files inside the <code>docs</code> folder. Below is a section explaining how to do it.</li>
+The <code>index.md</code> file is the main page of your new site. You can add more pages by creating new Markdown files inside the <code>docs</code> folder. Below is a section explaining how to do it.</li>
 <li>Navigate to your created project with:<br />
 <code>cd docs-as-code-tutorial</code></li>
 <li>You can preview your static site as you work on it by running the following command:<br />
@@ -123,12 +123,13 @@ This command starts a local server with your rendered page so you can see how it
 <h2 id="customizing-your-site">Customizing Your Site</h2>
 <p>You can start modifying the files in your project with your documentation details.</p>
 <ol>
-<li>Open the <code>index.md</code> file and change the title and information in the file and save them to see the changes update on your local server.</li>
+<li>Open the <code>index.md</code> file and change the title and information in it using Markdown syntax. Save your changes to see them update directly on your local server.</li>
 <li>Open the <code>mkdocs.yml</code> file and change the <code>site_name</code> value to your documentation project name:<br />
 <code>site_name: Docs-as-code Tutorial</code></li>
 </ol>
 <h2 id="creating-more-pages">Creating More Pages</h2>
-<p>You can add more pages to your site by modifying the <code>mkdocs.yml</code> configuration file. To do so, add the name of each page you want to add to your site and the file corresponding as <code>key: value</code> pairs under a <code>nav</code> key:</p>
+<p>You can add more pages to your site by creating more Markdown files inside the <code>docs</code> folder. Any Markdown file you place in the folder will automatically appear on your site as a new page on the Navigation panel.</p>
+<p>You can personalize how your pages are displayed on the Navigation panel by modifying the <code>mkdocs.yml</code> configuration file. To do so, add the name you want each page to have and specify its corresponding <code>.md</code> file as <code>key: value</code> pairs under a <code>nav</code> key, like so:</p>
 <pre><code class="yaml">site_name: Docs-as-code Tutorial
 nav:
     - Home: index.md
@@ -137,7 +138,7 @@ nav:
     - Deploy: deploy.md
 </code></pre>
 
-<p>The order of the files is going to be the same in which they will appear on your navigation panel:</p>
+<p>The order of the files is going to be the same in which they appear on your navigation panel:</p>
 <p><img alt="nav-panel" src="../nav-panel.png" /></p>
 <h2 id="building-the-static-files">Building the Static Files</h2>
 <p>Follow these steps to build the static files of your site:</p>
@@ -146,8 +147,11 @@ nav:
 <code>mkdocs build</code></li>
 <li>Run the following command to create a file that avoids pushing your build files into the remote repository:<br />
 <code>echo "site/" &gt;&gt; .gitignore</code><br />
-The static files (<code>index.html</code>, CSS files, and others) are now available in the <code>site</code> directory. You can use the files in that directory to host your site in an <strong>AWS S3</strong> bucket or any other static site hosting service.</li>
-</ol></div>
+The static files (<code>index.html</code>, CSS files, and others) are now available in the <code>site</code> directory. You can use the files in that directory to host your site in an <strong>AWS S3</strong> bucket or any other static site hosting service.<br />
+(You won't need to do this for this tutorial, this is only in case you later decide to explore a different approach.)</li>
+</ol>
+<hr />
+<p><a href="/">⬅ Home</a> | <a href="/repo/">➡ 2. Remote Repository</a></p></div>
         </div>
 
         <footer class="col-md-12">

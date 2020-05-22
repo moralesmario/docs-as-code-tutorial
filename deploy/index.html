@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Deploy - Docs-as-code Tutorial</title>
+        <title>3. Deploy - Docs-as-code Tutorial</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -50,13 +50,13 @@
                                 <a href="..">Home</a>
                             </li>
                             <li >
-                                <a href="../local-site/">Local Setup</a>
+                                <a href="../local-site/">1. Local Setup</a>
                             </li>
                             <li >
-                                <a href="../repo/">Remote Repository</a>
+                                <a href="../repo/">2. Remote Repository</a>
                             </li>
                             <li class="active">
-                                <a href="./">Deploy</a>
+                                <a href="./">3. Deploy</a>
                             </li>
                             <li >
                                 <a href="../more-resources/">More Resources</a>
@@ -114,7 +114,10 @@ If you have it, that means that your docs are ready in GitHub Pages.</li>
 <li>Navigate to the <strong>GitHub Pages</strong> section, where you can find the link to your documentation project page.
 <img alt="gh-pages-link" src="../gh-pages-link.png" /></li>
 </ol>
-<p><strong>IMPORTANT</strong>: If you make changes to your documentation site, after pushing your changes to <code>origin master</code>, remember to run the <code>mkdocs gh-deploy</code> command to also update your GitHub pages with the latest changes.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong>: To sync the deployment process with any new changes you push to your remote repository, you need to merge the push command with the deploy command, like so:<br />
+<code>git push -u origin master &amp;&amp; mkdocs gh-deploy</code></p>
+</blockquote>
 <h1 id="alternatives-for-deploying">Alternatives for Deploying</h1>
 <h2 id="deploying-to-an-aws-s3-bucket">Deploying to an AWS S3 Bucket</h2>
 <p>To follow this approach:</p>
@@ -174,7 +177,9 @@ If you have it, that means that your docs are ready in GitHub Pages.</li>
 </li>
 <li>Click the <strong>Deploy site</strong> button.<br />
 The deploying process starts. When finished, Netlify gives you the address where your site is deployed. Every time you commit your changes and push them to your remote Github repository, Netlify redeploys your site.</li>
-</ol></div>
+</ol>
+<hr />
+<p><a href="/repo/">⬅ 2. Remote Repository</a> | <a href="/more-resources/">➡ More Resources</a></p></div>
         </div>
 
         <footer class="col-md-12">
