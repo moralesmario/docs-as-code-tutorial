@@ -9,7 +9,7 @@ This section guides you through the process of creating your local documentation
 You should get something like this as a response:  
 `mkdocs, version 1.0.4 from ...`
 3. Run this command to create your local project:  
-`mkdocs new docs-as-code-tutorial` – _You can use a different name for your project_  
+`mkdocs new docs-as-code-tutorial` (ℹ) _You can use a different name for your project_  
 This creates a folder with a configuration file called `mkdocs.yml` and a folder called `docs`, which contains an `index.md` file.  
 ![created-docs](created-docs.png)
 The `index.md` file is the main page of your new site. You can add more pages there by creating new Markdown files inside the `docs` folder. We will get to that later.
@@ -58,13 +58,14 @@ site/
 ```
 mkdocs>=0.9.0
 ```
-Your project structure must be like the following:  
+Your project structure must be something like the following:  
 ```
-project
+docs-as-code-tutorial
 ├── docs
 |   ├── index.md
-|   └── page2.md
-|   └── page3.md
+|   └── local-site.md
+|   └── repo.md
+|   └── deploy.md
 ├── .gitignore
 ├── mkdocs.yml
 └── requirements.txt

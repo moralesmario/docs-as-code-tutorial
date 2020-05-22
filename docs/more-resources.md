@@ -1,17 +1,17 @@
-# More resources
+# More Resources
 
-This is a basic example of a docs-as-code approach for writing documentation. You can search for more different tools and ways to implement them together and see which ones work better for you.
+This is a basic example of a _docs-as-code_ approach for writing documentation. You can search for more tools and ways to implement them together and see which ones work better for you.
 
 ## Static Site Generators
 
 Visit this site [https://www.staticgen.com/](https://www.staticgen.com/) to see different options of static site generators. Some of the most common ones are:
 
-- MkDocs
-- Gatsby
-- Hugo
-- Docsify
-- VuePress
-- Jekyll
+- [MkDocs](https://www.mkdocs.org/)
+- [Gatsby](https://www.gatsbyjs.org/)
+- [Hugo](https://gohugo.io/)
+- [Docsify](https://docsify.js.org/)
+- [VuePress](https://vuepress.vuejs.org/)
+- [Jekyll](https://jekyllrb.com/)
 
 ## Repository Hosting
 

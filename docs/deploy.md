@@ -6,7 +6,7 @@ Now you are going to connect your repository with Netlify.
 2. Click the **New site from Git** button.
 3. Click the **GitHub** button.
 4. Click **Continue**.  
-**IMPORTANT**: Don't click the **Authorize** button if you are asked to authorize access to the Organization you belong to. You will grant access later only to your personal account.
+⚠ **IMPORTANT**: Don't click the **Authorize** button if you are asked to authorize access to the Organization you belong to. You will grant access later only to your personal account.
 5. Click the **Configure Netlify on GitHub** button.
 6. Click your username when prompted.
 7. Click the **Only select repositories** option.
