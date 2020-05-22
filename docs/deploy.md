@@ -22,7 +22,8 @@ If you have it, that means that your docs are ready in GitHub Pages.
 4. Navigate to the **GitHub Pages** section, where you can find the link to your documentation project page.
 ![gh-pages-link](gh-pages-link.png)
 
-**IMPORTANT**: If you make changes to your documentation site, after pushing your changes to `origin master`, remember to run the `mkdocs gh-deploy` command to also update your GitHub pages with the latest changes.
+> **IMPORTANT**: To sync the deployment process with any new changes you push to your remote repository, you need to merge the push command with the deploy command, like so:  
+`git push -u origin master && mkdocs gh-deploy`
 
 # Alternatives for Deploying
 
@@ -81,3 +82,7 @@ To connect your repository with Netlify:
     4. **Publish directory**: `site/`.
 12. Click the **Deploy site** button.  
 The deploying process starts. When finished, Netlify gives you the address where your site is deployed. Every time you commit your changes and push them to your remote Github repository, Netlify redeploys your site.
+
+---
+
+[⬅ 2. Remote Repository](/repo/) | [➡ More Resources](/more-resources/)

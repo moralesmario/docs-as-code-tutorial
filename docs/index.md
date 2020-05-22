@@ -26,3 +26,7 @@ There are many different tools available –from static site generators to hosti
 ## Get Help and Give Feedback
 
 If you follow this tutorial and need help or find something that is not working or can be improved, don't hesitate to reach out at: `mario.morales@wizeline.com`.
+
+---
+
+[➡ 1. Local Setup](/local-site/)

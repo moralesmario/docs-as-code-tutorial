@@ -27,3 +27,6 @@ Additionally to [Netlify](https://www.netlify.com/), you can explore different t
 - [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/static-website-hosting.html)
 - [Heroku](https://www.heroku.com/)
 - [GitHub Pages](https://pages.github.com/)
+
+---
+[⬅ 3. Deploy](/deploy)

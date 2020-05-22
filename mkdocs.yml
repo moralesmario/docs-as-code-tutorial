@@ -1,7 +1,7 @@
 site_name: Docs-as-code Tutorial
 nav:
     - Home: index.md
-    - Local Setup: local-site.md
-    - Remote Repository: repo.md
-    - Deploy: deploy.md
+    - 1. Local Setup: local-site.md
+    - 2. Remote Repository: repo.md
+    - 3. Deploy: deploy.md
     - More Resources: more-resources.md

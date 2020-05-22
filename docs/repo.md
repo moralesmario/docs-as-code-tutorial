@@ -32,3 +32,7 @@ Follow the next steps to push your documents to the remote repository:
 `git remote add origin <HTTPS OR SSH ADDRESS CORRESPONDING TO YOUR REPOSITORY>`
 6. Push your documents to GitHub:  
 `git push -u origin master`
+
+---
+
+[⬅ 1. Local Setup](/local-site/) | [➡ 3. Deploy](/deploy/)
