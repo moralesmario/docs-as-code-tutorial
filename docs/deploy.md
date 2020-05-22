@@ -22,8 +22,9 @@ If you have it, that means that your docs are ready in GitHub Pages.
 4. Navigate to the **GitHub Pages** section, where you can find the link to your documentation project page.
 ![gh-pages-link](gh-pages-link.png)
 
-> **IMPORTANT**: To sync the deployment process with any new changes you push to your remote repository, you need to merge the push command with the deploy command, like so:  
-`git push -u origin master && mkdocs gh-deploy`
+> **IMPORTANT**: To sync the deployment process with any new changes you push to your remote repository, you can merge the push command with the deploy command, like so:  
+`git push -u origin master && mkdocs gh-deploy`  
+This pushes any new changes to your master branch to keep your repository updated and builds and deploys those changes to your site.
 
 # Alternatives for Deploying
 
