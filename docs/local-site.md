@@ -64,5 +64,3 @@ The static files (`index.html`, CSS files, and others) are now available in the 
 (You won't need to do this for this tutorial, this is only in case you later decide to explore a different approach.)
 
 ---
-
-[⬅ Home](/) | [➡ 2. Remote Repository](/repo/)
