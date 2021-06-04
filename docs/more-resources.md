@@ -29,4 +29,3 @@ Additionally to [Netlify](https://www.netlify.com/), you can explore different t
 - [GitHub Pages](https://pages.github.com/)
 
 ---
-[⬅ 3. Deploy](/deploy)
