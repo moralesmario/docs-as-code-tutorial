@@ -85,5 +85,3 @@ To connect your repository with Netlify:
 The deploying process starts. When finished, Netlify gives you the address where your site is deployed. Every time you commit your changes and push them to your remote Github repository, Netlify redeploys your site.
 
 ---
-
-[⬅ 2. Remote Repository](/repo/) | [➡ More Resources](/more-resources/)
