@@ -34,5 +34,3 @@ Follow the next steps to push your documents to the remote repository:
 `git push -u origin master`
 
 ---
-
-[⬅ 1. Local Setup](/local-site/) | [➡ 3. Deploy](/deploy/)
